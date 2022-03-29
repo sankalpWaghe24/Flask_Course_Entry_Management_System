@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding-bottom:32%;">
+
+  <br><br>
+  <a href="/">&nbsp;&nbsp;<button type="submit" class="btn btn-warning"> Add New</button></a>
+  <br><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Course</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in details %}
+      <tr>
+
+        <th scope="row">{{ i[0] }}</th>
+        <td>{{ i[1] }}</td>
+        <td>{{ i[2] }}</td>
+        <td>{{ i[3] }}</td>
+        <td>{{ i[4] }}</td>
+        <td><a href="/edit/{{ i[0] }}"><button type="submit" class="btn btn-success">Edit</button></a>&nbsp;<a
+            href="/delete/{{ i[0] }}"><button type="submit" class="btn btn-danger">Delete</button></a></td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

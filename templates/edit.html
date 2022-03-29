@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for i in details %}
+<br><br><br><br><br>
+<section class="container-fluid">
+  <section class="row justify-content-center">
+    <section class="col-12 col-sm-6 col-md-3"  style="padding-bottom:13%;" >
+
+      <form method="post" action="/update">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" value="{{ i[1] }}" name="sname"
+            class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" value="{{ i[2] }}" name="semail"
+            class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter email">
+
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Contact No</label>
+          <input type="text" value="{{ i[3] }}" name="scontact"
+            class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter Contact No">
+
+        </div>
+  
+<!-- old -->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Course</label>
+          <input type="text" value="{{ i[4] }}" name="scourse"
+            class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter">
+
+        </div>
+
+  
+
+        <input type="hidden" value="{{ i[0] }}" name="sid" class="form-control"
+          id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter Contact No">
+
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </section>
+  </section>
+</section>
+      
+      {% endfor %}
+
+      {% endblock %}

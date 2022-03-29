@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <style>
+        /* My Services CSS */
+        .services .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: rgb(246, 249, 250);
+        }
+
+        .services .boxes .box {
+            margin: 20px 0;
+            width: calc(100% / 3 - 20px);
+            text-align: center;
+            border-radius: 12px;
+            padding: 30px 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+            cursor: default;
+        }
+
+        .services .boxes .box:hover {
+            background: var(--info-color);
+            color: var(--skyblue-color);
+        }
+
+        .services .boxes .box .icon {
+            height: 50px;
+            width: 50px;
+            background: var(--info-color);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            color: var(--skyblue-color);
+            margin: 0 auto 10px auto;
+        }
+
+        .boxes .box:hover .icon {
+            background: var(--skyblue-color);
+            color: var(--info-color);
+        }
+
+        .services .boxes .box:hover .topic,
+        .services .boxes .box:hover p {
+            color: var(--skyblue-color);
+        }
+
+        /* Footer CSS */
+        footer {
+            background: var(--info-color);
+            padding-bottom: 30px 0;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 4%;
+            text-align: center;
+        }
+
+        footer .text span {
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--skyblue-color);
+        }
+
+        footer .text span a {
+            font-weight: 500;
+            color: var(--skyblue-color);
+        }
+
+        footer .text span a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+    <!-- My Services Section Start -->
+    <section class="services" id="services">
+        <div class="content">
+            <h1 style="text-align: center; color:aliceblue"><u>Services</u> </h1>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic"><b> Python Developer</b></div>
+                    <p>A Python Developer is responsible for coding, designing, deploying, and debugging development projects, typically on the server-side (or back-end). </p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic"><b> Web Development</b></div>
+                    <p>A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications using a client–server model.</p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic"><b> Angular Development</b></div>
+                    <p> The Angular Framework is a popular open-source front-end platform for creating dynamic and modern web applicationsand  adds structure and design patterns to front-end development</p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <div class="topic"><b> WordPress Design</b></div>
+                    <p> WordPress (WP, WordPress.org) is a free and open-source content management system (CMS) written in PHP and paired with a MySQL or MariaDB database</p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-quidditch"></i>
+                    </div>
+                    <div class="topic"><b>React Developer</b></div>
+                    <p>A React developer is simply a frontend developer that has extensive experience using React.Full-Stack React developers are also proficient with using MongoDB, Express, and Node. </p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="topic"><b>App Development</b> </div>
+                    <p>Application development is the process of creating a computer program or a set of programs to perform the different tasks that a business requires.</p>
+                    <a type="submit" href='/form' class="btn btn-info btn-block">Register</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="text">
+            <span>Created By <a href="#">Sankalp Waghe</a> | © 2021 All Rights
+                Reserved.</span>
+        </div>
+    </footer>
+</body>
+
+{% endblock %}
